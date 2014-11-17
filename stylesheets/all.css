@@ -1,0 +1,445 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif; }
+
+html, h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+html, body {
+  font-weight: 400; }
+
+/**
+ * _mixins.scss
+ *
+ * @author    Matthew White <matt@substructu.re>
+ * @date      2014-08-26
+ *
+ * This is the core SASS mixin library.  Each particular mixin has it's own 
+ * integrated description and usage provisions.
+ */
+/**
+ * ⌂-background
+ *
+ * Sets a solid or semi-transparent background color.  Accepts an optional 
+ * opacity (alpha) value.  Provides a solid color fallback.
+ */
+/**
+ *
+ * ⌂-button
+ *
+ * Styles an element to a site specific button.  Accepts an
+ * argument for button variants.
+ *
+ */
+/**
+ * ⌂-clear
+ *
+ * Multi-use clear mixin for various contexts.  Accepts an optional context.
+ * Default usage implements a Bourbon micro-clearfix.
+ */
+/**
+ * ⌂-container
+ *
+ * Declares a container around elements sized with Neat's span-columns mixin.  
+ * Accepts an optional argument - pseudo - for use on containers that cannot
+ * be margined (e.g. full screen video/imagery).
+ */
+/**
+ *
+ * ⌂-copy
+ *
+ * Implements standardized site copy. Accepts arguments for
+ * variants (inversions, etc.).
+ *
+ */
+/**
+ *
+ * ⌂-font-face
+ *
+ * Implements standardized site copy. Accepts arguments for
+ * variants (inversions, etc.).
+ *
+ */
+/**
+ * ⌂-heading
+ *
+ * Implements a site standardized heading. Accepts a single
+ * argument for heading level.
+ *
+ */
+/**
+ * ⌂-hide-text
+ *
+ * Hides text of applied element.  Accepts no arguments. Based
+ * off of a previous version of the H5BP image replacement 
+ * method.  I've found it to be far more reliable than the clip
+ * method.
+ *
+ */
+/**
+ * ⌂-icon
+ *
+ * Implements a webfont glyph (typically Fontello).  Needs to be used within
+ * a pseudo element (e.g. &:before, &:after).  Accepts a required, named
+ * icon, an optional size, and an optional color.  Available icons can be
+ * modified by adding directly to the $icons map stack.
+ */
+/**
+ * ⌂-layer
+ *
+ * Sets a z-index value based on semantic naming as opposed to explicit integer
+ * values.  Accepts a required, named layer.  Hierarchy can be modified by
+ * adding directly to the $layers map stack.
+ */
+/**
+ * ⌂-max-size
+ *
+ */
+/**
+ * ⌂-pattern
+ *
+ */
+/**
+ * ⌂-rte
+ *
+ * Implements styling for (R)ich (T)ext (E)ditors.  Should be used to format
+ * the output of a CMS preformatted field.
+ *
+ */
+article, aside, details, footer, header, menu, nav, section, audio, canvas, embed, figure, figure figcaption, iframe, object, video {
+  display: block; }
+
+address, cite, dfn, em, i, var {
+  font-style: normal; }
+
+blockquote, dialog, dl, dl dd, menu, p, pre, form fieldset, h1, h2, h3, h4, h5, h6, input, select, textarea, ul, ol, figure, hr, body {
+  margin: 0; }
+
+dialog, menu, form fieldset, form fieldset legend, input, textarea, ul, ol, table thead th, table tbody td, table tfoot td {
+  padding: 0; }
+
+dialog, form fieldset, iframe {
+  border: 0; }
+
+ul, ul li, ol, ol li {
+  list-style: none; }
+
+q {
+  quotes: none; }
+
+@font-face {
+  font-family: "fontello";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/stylesheets/dependencies/fontello/font/fontello.eot?7885012");
+  src: url("/stylesheets/dependencies/fontello/font/fontello.eot?7885012#iefix") format("embedded-opentype"), url("/stylesheets/dependencies/fontello/font/fontello.woff?7885012") format("woff"), url("/stylesheets/dependencies/fontello/font/fontello.ttf?7885012") format("truetype"), url("/stylesheets/dependencies/fontello/font/fontello.svg?7885012#fontello") format("svg"); }
+.codehilite code, .codehilite pre {
+  color: #fdce93;
+  background-color: #3f3f3f; }
+
+.codehilite .hll {
+  background-color: #222; }
+
+.codehilite .c {
+  color: #7f9f7f; }
+
+.codehilite .err {
+  color: #e37170;
+  background-color: #3d3535; }
+
+.codehilite .g {
+  color: #7f9f7f; }
+
+.codehilite .k {
+  color: #f0dfaf; }
+
+.codehilite .l {
+  color: #ccc; }
+
+.codehilite .n {
+  color: #dcdccc; }
+
+.codehilite .o {
+  color: #f0efd0; }
+
+.codehilite .x {
+  color: #ccc; }
+
+.codehilite .p {
+  color: #41706f; }
+
+.codehilite .cm {
+  color: #7f9f7f; }
+
+.codehilite .cp {
+  color: #7f9f7f; }
+
+.codehilite .c1 {
+  color: #7f9f7f; }
+
+.codehilite .cs {
+  color: #cd0000;
+  font-weight: bold; }
+
+.codehilite .gd {
+  color: #cd0000; }
+
+.codehilite .ge {
+  color: #ccc;
+  font-style: italic; }
+
+.codehilite .gr {
+  color: red; }
+
+.codehilite .gh {
+  color: #dcdccc;
+  font-weight: bold; }
+
+.codehilite .gi {
+  color: #00cd00; }
+
+.codehilite .go {
+  color: gray; }
+
+.codehilite .gp {
+  color: #dcdccc;
+  font-weight: bold; }
+
+.codehilite .gs {
+  color: #ccc;
+  font-weight: bold; }
+
+.codehilite .gu {
+  color: purple;
+  font-weight: bold; }
+
+.codehilite .gt {
+  color: #0040D0; }
+
+.codehilite .kc {
+  color: #dca3a3; }
+
+.codehilite .kd {
+  color: #ffff86; }
+
+.codehilite .kn {
+  color: #dfaf8f;
+  font-weight: bold; }
+
+.codehilite .kp {
+  color: #cdcf99; }
+
+.codehilite .kr {
+  color: #cdcd00; }
+
+.codehilite .kt {
+  color: #00cd00; }
+
+.codehilite .ld {
+  color: #cc9393; }
+
+.codehilite .m {
+  color: #8cd0d3; }
+
+.codehilite .s {
+  color: #cc9393; }
+
+.codehilite .na {
+  color: #9ac39f; }
+
+.codehilite .nb {
+  color: #efef8f; }
+
+.codehilite .nc {
+  color: #efef8f; }
+
+.codehilite .no {
+  color: #ccc; }
+
+.codehilite .nd {
+  color: #ccc; }
+
+.codehilite .ni {
+  color: #c28182; }
+
+.codehilite .ne {
+  color: #c3bf9f;
+  font-weight: bold; }
+
+.codehilite .nf {
+  color: #efef8f; }
+
+.codehilite .nl {
+  color: #ccc; }
+
+.codehilite .nn {
+  color: #8fbede; }
+
+.codehilite .nx {
+  color: #ccc; }
+
+.codehilite .py {
+  color: #ccc; }
+
+.codehilite .nt {
+  color: #9ac39f; }
+
+.codehilite .nv {
+  color: #dcdccc; }
+
+.codehilite .ow {
+  color: #f0efd0; }
+
+.codehilite .w {
+  color: #ccc; }
+
+.codehilite .mf {
+  color: #8cd0d3; }
+
+.codehilite .mh {
+  color: #8cd0d3; }
+
+.codehilite .mi {
+  color: #8cd0d3; }
+
+.codehilite .mo {
+  color: #8cd0d3; }
+
+.codehilite .sb {
+  color: #cc9393; }
+
+.codehilite .sc {
+  color: #cc9393; }
+
+.codehilite .sd {
+  color: #cc9393; }
+
+.codehilite .s2 {
+  color: #cc9393; }
+
+.codehilite .se {
+  color: #cc9393; }
+
+.codehilite .sh {
+  color: #cc9393; }
+
+.codehilite .si {
+  color: #cc9393; }
+
+.codehilite .sx {
+  color: #cc9393; }
+
+.codehilite .sr {
+  color: #cc9393; }
+
+.codehilite .s1 {
+  color: #cc9393; }
+
+.codehilite .ss {
+  color: #cc9393; }
+
+.codehilite .bp {
+  color: #efef8f; }
+
+.codehilite .vc {
+  color: #efef8f; }
+
+.codehilite .vg {
+  color: #dcdccc; }
+
+.codehilite .vi {
+  color: #ffffc7; }
+
+.codehilite .il {
+  color: #8cd0d3; }
+
+a {
+  text-decoration: none;
+  color: #003F2C; }
+  a:active {
+    outline: 0; }
+  @media screen and (min-width: 62.5em) {
+    a:hover {
+      color: black; } }
+
+/*
+*
+*  Global Border-Box Override
+*
+*  Unnecessary if Bourbon/Neat already being loaded.
+*
+*  * {
+*    @include box-sizing(border-box);
+*  }
+*
+*/
+body {
+  width: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  background: #FFFFFF;
+  background: white;
+  color: #6D6D6D;
+  font-size: 16px;
+  height: 100%; }
+  @media screen and (min-width: 46.875em) {
+    html, body {
+      font-size: 18px; } }
+  @media screen and (min-width: 62.5em) {
+    html, body {
+      font-size: 20px; } }
+
+main {
+  height: 100%;
+  width: 100%; }
+
+div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1em;
+  margin: auto;
+  -webkit-animation-name: blurry;
+  -moz-animation-name: blurry;
+  animation-name: blurry;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  text-align: center; }
+
+span {
+  color: red;
+  font-weight: bold; }
+
+@-webkit-keyframes blurry {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+@-moz-keyframes blurry {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+@keyframes blurry {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
